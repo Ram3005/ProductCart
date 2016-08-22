@@ -1,0 +1,231 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Cart"
+    android:orientation="vertical"
+    android:weightSum="20">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Ready to Proceed"
+        android:textColor="#ffffff"
+
+        android:background="@android:color/holo_green_dark"
+        android:gravity="center"
+        android:id="@+id/textView3"
+        android:layout_weight="0.5"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18.5"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <!-- TODO: Update blank fragment layout -->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cart_products"
+                    android:scrollbars="none"/>
+
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#000000"
+                    android:id="@+id/xyz"
+                    android:layout_below="@+id/cart_products"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/xyz"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:weightSum="10"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="8"
+                            android:gravity="left|center"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="16dp"
+                            android:text="Sub-Total"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_marginRight="0dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:text="\u20B9 "
+                            android:textSize="16dp"/>
+                        <TextView
+                            android:layout_weight="1.5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:text="1000"
+                            android:id="@+id/subtotal"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="10"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="8"
+                            android:gravity="left|center"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="16dp"
+                            android:text="Delivery Charge"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_marginRight="0dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:text="\u20B9 "
+                            android:textSize="16dp"/>
+                        <TextView
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:text="0"
+                            android:id="@+id/delivery_charge"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:weightSum="10"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="8"
+                            android:gravity="left|center"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="16dp"
+                            android:text="Service Tax"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_marginRight="0dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:text="\u20B9 "
+                            android:textSize="16dp"/>
+                        <TextView
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="left|center"
+                            android:text="0"
+                            android:id="@+id/tax"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:weightSum="10"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="7"
+                            android:gravity="left|center"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="16dp"
+                            android:text="Discount"/>
+
+                        <EditText
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:hint="  Promo   "
+                            android:textColorHint="#ffffff"
+                            android:textColor="#000000"
+                            android:background="@android:color/holo_green_light"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:id="@+id/promocode"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="#000000"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:background="@android:color/holo_orange_dark"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:gravity="left|center"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="PLACE ORDER"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_marginRight="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="\u20B9 "
+            android:textStyle="bold"
+            android:textSize="16dp"/>
+        <TextView
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:text="5000"
+            android:textStyle="bold"
+            android:id="@+id/total"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
